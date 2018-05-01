@@ -13,5 +13,16 @@ namespace WebApplication1.admin
         {
 
         }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Btn_Logout_Click(object sender, EventArgs e)
+        {
+            HttpContext.Current.GetOwinContext().Authentication.SignOut(Microsoft.AspNet.Identity.DefaultAuthenticationTypes.ApplicationCookie);
+            Response.Redirect("~/login.aspx");
+        }
     }
 }

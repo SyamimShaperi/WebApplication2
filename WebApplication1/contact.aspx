@@ -4,6 +4,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentBody" runat="server">
+    
+
+    <div id="contactus">
+    <form id="form1" runat="server">
     <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" />
     <p>
         <br />
@@ -41,8 +45,20 @@
     <p>
         <asp:Literal ID="Literal1" runat="server"></asp:Literal>
     </p>
-
-
+    </form>
+    </div>
+        
+        <div id="map">
+        <script src="map.js"></script>
+          <script> var map;
+          function initMap() {
+                  map = new google.maps.Map(document.getElementById('map'),
+                  { center: { lat: 4.887916, lng: 114.949184, }, zoom: 12 });
+          }
+          </script>
+        
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfVCHp_QlDdRdDvXQFafa-aNeO2Lccp7Q&callback=initMap"></script>
+        </div>
     
 
 

@@ -14,34 +14,46 @@
 
 </head>
 
-<body>
+<body runat="server">
 
-    <form id="form1" runat="server">
-    
     <div class="wrapper">
+        <div id = "banner">
+            <asp:Image ID ="Image1" runat="server" Height="180px" ImageUrl="~/ProductImages/banner1.jpg" Width="100%" />
+        </div>
         <div class="menu">
             <ul>
                 <li class="navigation_first_item"></li>
                 <li><a href="contact.aspx">Contact</a></li>
                 <li><a href="product.aspx">Product</a></li>
                 <li><a href="default.aspx">Home</a></li>
-                <li><a href="Register.aspx">Admin</a></li>
                 <li><a href="login.aspx">Login</a></li>
+                <li><a href="Register.aspx">Register</a></li>
             </ul>
         </div> 
 
-    <div class="clear"></div>
-    
-    <div class="content"><asp:ContentPlaceHolder ID="ContentBody" runat="server"></asp:ContentPlaceHolder></div>
-    
-    <div class="clear"></div>          
+    <div class="clear">
 
-    <div class="footer"><h2>Copyright @ Designed by BadmintonShop.Co</h2></div>
+    </div>
+    
+    <div class="content">
+        <asp:ContentPlaceHolder ID="ContentBody" runat="server"></asp:ContentPlaceHolder>
+
+    </div>
+    
+    <div class="clear">
+
+    </div>          
+
+    <div class="footer" style="background:rgb(10, 110, 178); height:40px;">
+
+        <div id="copyright" style="text-align:center; font-size:16px; color:#fff; padding-top:10px;">
+        <p>Copyright @ Designed by BadmintonShop.Co</p>
+        </div>
 
     </div>
 
-    </form>
-
+    </div>
+ 
 </body>
 
 </html>

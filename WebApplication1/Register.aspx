@@ -10,24 +10,28 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentBody" runat="server">
     
-    <div align="center">
-        <h1><span class="auto-style1">Registration Form</span></h1>
-        <br/>
-    <asp:Label ID="Label1" runat="server" Text="Username: "></asp:Label>
-        <asp:TextBox ID="txtRegEmail" runat="server" Height="16px" style="margin-bottom: 0px" Width="105px"></asp:TextBox>
-        <br />
-        <br />
-        <asp:Label ID="Label2" runat="server" Text="Password: "></asp:Label>
-        <asp:TextBox ID="txtRegPassword" runat="server" Width="107px"></asp:TextBox>
-        <br />
-        <br />
-        <asp:Button ID="btnReg" runat="server" Text="Register" Width="100px" OnClick="btnReg_Click" />
-        <br />
-        <br />
-        <br />
-        <asp:Literal ID="LitRegisterError" runat="server"></asp:Literal>
-        <br />
-        <br />
-        <br />
+   <div id="Registration">
+        <form id="form1" runat="server">
+            <div align="center">
+                <h1><span class="auto-style1">Registration Form</span></h1>
+                <br/>
+                <asp:Label ID="Label1" runat="server" Text="Username: "></asp:Label>
+                <asp:TextBox ID="txtRegEmail" runat="server" Height="16px" style="margin-bottom: 0px" Width="105px"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Label ID="Label2" runat="server" Text="Password: "></asp:Label>
+                <asp:TextBox ID="txtRegPassword" runat="server" Width="107px"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Button ID="btnReg" runat="server" Text="Register" Width="100px" OnClick="btnReg_Click" />
+                <br />
+                <br />
+                <br />
+                <asp:Literal ID="LitRegisterError" runat="server"></asp:Literal>
+                <br />
+                <br />
+                <br />
+            </div>
+        </form>
     </div>
 </asp:Content>

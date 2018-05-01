@@ -2,20 +2,38 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">Home</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server"></asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentBody" runat="server">
-    This is homepage
+    <form id="form1" runat="server">
+    This is the Product Lists
 <h2>Products</h2>
-    <div id="table1">
-        <table>
-            <tr>
-                <td><img src="ProductImages/PowerCushion.jpg" alt="" width="185"/><p></p></td>
-                <td><img src="ProductImages/2017 YONEX NANORAY 10F.JPG" alt="" width="185"/><p></p></td>
-                <td><img src="ProductImages/ARCSABER_11_Metallic_Red.png" alt="" width="185"/><p></p></td>
-                <td><img src="ProductImages/2015 YONEX Lin Dan Exclusive Pro Tournament Bag.jpg" alt="" width="185"/><p></p></td>
-                <td><img src="ProductImages/2016 YONEX LEE CHONG WEI EXCLUSIVE II PRO TOURNAMENT BAG [BAG11LCWEX].jpg" alt="" width="185"/><p></p></td>
-
-            </tr>
-        </table>
-        <br/>
-    </div>
+   
+        <p>
+        <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1">
+            <HeaderTemplate>
+                    <table><tr>
+                    </HeaderTemplate>
+                    <ItemTemplate>
+                        <td>
+                            <a href="<%#Eval("ProductId", "product.aspx?ProductId={0}") %>"><asp:Image ID="imgCover" runat="server" AlternateText="Image Cover" ImageUrl='<%# Eval("ProductID","~/ProductImages/{0}.jpg") %>' Width="200" Height="200" /></a>
+ 
+                            <p>
+                            </p>
+                            
+                            <a href="<%#Eval("ProductId", "product.aspx?ProductId={0}") %>"><%#Eval ("ProductName")%>/></a>
+                            <p>
+                            </p>
+                            <p> 
+                            </p>                         
+                            <a>Bnd $<%#Eval ("ProductPrice") %></a></td>
+                    </ItemTemplate>
+                    <FooterTemplate>
+                    </tr></table>
+                    </FooterTemplate>
+        </asp:Repeater>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IdentityConnectionString %>" SelectCommand="SELECT * FROM [TblProduct] WHERE ProductQuantity &gt; 0 ORDER BY ProductId DESC"></asp:SqlDataSource>
+        <br />
+    </p>
+    
+       
+    </form>
        
 </asp:Content>

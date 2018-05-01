@@ -17,12 +17,21 @@ body {
 .wrapper {
     width: 950px;
     margin:auto;
+    padding-bottom: 20px;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    overflow: hidden;
 }
 
 .table1 {
     margin-left: 100px;
     padding-right: 30px;
     width: 800px;
+    border-radius: 50px;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    vertical-align: central;
 }
 /*Homepage*/
 .content {
@@ -100,13 +109,57 @@ body {
 
 /*Footer*/
 .footer {
-    height: 50px;
-    background-color: rgb(254, 254, 254);
-    color: rgb( 255, 255, 255);
-    border-radius: 5px 5px 5px 5px;
+  width:100%;
+
 }
 
-.footer h2 {
-    padding: 15px;
-    text-align: center;
+#copyright {
+  border-radius: 5px 5px 5px 5px;
+  padding-top: 5px;
 }
+
+
+/*login*/
+#login {
+    
+    padding: 50px;
+    border: 1px solid black;
+    margin-top: 50px;
+    width: 300px;
+    margin-bottom: 50px;
+    box-shadow: 5px 10px #888888;
+    margin-left: 270px;
+}
+
+/*registration form*/
+#Registration  {
+    
+    padding: 50px;
+    border: 1px solid black;
+    margin-top: 50px;
+    width: 300px;
+    margin-bottom: 50px;
+    box-shadow: 5px 10px #888888;
+    margin-left: 270px;
+}
+
+/*contactus form*/
+#contactus  {
+    
+    padding: 50px;
+    border: 1px solid black;
+    margin-top: 50px;
+    width: 300px;
+    margin-bottom: 50px;
+    box-shadow: 5px 10px #888888;
+    margin-left: 270px;
+}
+
+/*map*/
+#map {
+   width: 500px;
+   height: 700px;
+   background-color: grey;
+   
+
+ }

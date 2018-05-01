@@ -27,6 +27,7 @@ namespace WebApplication1
             if (user != null)
             {
                 LogUserIn(userManager, user);
+                Response.Redirect("default.aspx");
             }
             else
             {
@@ -42,10 +43,17 @@ namespace WebApplication1
                 user, DefaultAuthenticationTypes.ApplicationCookie);
             authenticationManager.SignIn(new AuthenticationProperties() { }, userIdentity);
 
-
-            if (Request.QueryString["ReturnUrl"] != null)
+            if (Request.QueryString["~/login.aspx"] != null)
             {
-                Response.Redirect(Request.QueryString["ReturnUrl"]);
+                Response.Redirect(Request.QueryString["~/login.aspx"]);
+            }
+            else
+            {
+                String UserRoles = usermanager.GetRoles(user.Id).FirstOrDefault();
+                if (UserRoles.Equals("Admin1"))
+                {
+                    Response.Redirect("~/admin/List.aspx");
+                }
             }
         }
     }

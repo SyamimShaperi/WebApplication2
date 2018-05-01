@@ -13,7 +13,7 @@ namespace WebApplication1
         protected void btnSendEmail_Click(object sender, EventArgs e)
         {
             SmtpClient smtpClient = new SmtpClient();
-            MailMessage msg = new MailMessage("syamim28@gmail.c", "syamim28@gmail.com");
+            MailMessage msg = new MailMessage("Bdmntn.co@gmail.com", "Bdmntn.co@gmail.com");
             msg.Subject = txtSubject.Text;
             msg.Body = txtBody.Text;
 
@@ -21,10 +21,9 @@ namespace WebApplication1
             smtpClient.Port = 587;
             smtpClient.EnableSsl = true;
 
-            System.Net.NetworkCredential credentials = new System.Net.NetworkCredential("syamim28@gmail.com", "YOURGMAILPWD");
+            System.Net.NetworkCredential credentials = new System.Net.NetworkCredential("Bdmntn.co@gmail.com", "Badmintonco2824");
             smtpClient.Credentials = credentials;
-            msg = new MailMessage("syamim28@gmail.com", "syamim28@gmail.com");
-
+            
             try
             {
                 smtpClient.Send(msg);
