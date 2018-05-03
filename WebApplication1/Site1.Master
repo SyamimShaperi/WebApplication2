@@ -44,10 +44,14 @@
 
     </div>          
 
-    <div class="footer" style="background:rgb(10, 110, 178); height:40px;">
+    <div class="footer" style="background:rgb(10, 110, 178); height:60px;">
 
         <div id="copyright" style="text-align:center; font-size:16px; color:#fff; padding-top:10px;">
         <p>Copyright @ Designed by BadmintonShop.Co</p>
+
+            <a href="http://validator.w3.org/check?uri=referer">Validate HTML</a> |
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">Validate CSS</a> |
+            <a href="login.aspx">Admin</a>
         </div>
 
     </div>

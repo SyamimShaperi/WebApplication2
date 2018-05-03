@@ -9,13 +9,13 @@
     <p>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="ProductId" DataSourceID="SqlDataSource1" Width="938px" Height="268px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
             <Columns>
-                <asp:CommandField ShowDeleteButton="True" />
+                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                 <asp:BoundField DataField="ProductId" HeaderText="ProductId" ReadOnly="True" SortExpression="ProductId" />
                 <asp:BoundField DataField="ProductName" HeaderText="ProductName" SortExpression="ProductName" />
                 <asp:BoundField DataField="ProductDesc" HeaderText="ProductDesc" SortExpression="ProductDesc" />
                 <asp:BoundField DataField="ProductQuantity" HeaderText="ProductQuantity" SortExpression="ProductQuantity" />
                 <asp:BoundField DataField="ProductPrice" HeaderText="ProductPrice" SortExpression="ProductPrice" />
-                <asp:HyperLinkField DataNavigateUrlFields="ProductId" DataNavigateUrlFormatString="Uploadimage.aspx?Id={0}" Text="UploadImage" />
+                <asp:HyperLinkField DataNavigateUrlFields="ProductId" DataNavigateUrlFormatString="Uploadimage.aspx?ProductId={0}" Text="Upload Image" />
                 <asp:HyperLinkField DataNavigateUrlFields="ProductId" DataNavigateUrlFormatString="Edit.aspx?ProductId={0}" Text="Edit" />
             </Columns>
         </asp:GridView>
@@ -49,6 +49,7 @@
     </p>
         <p>
           <asp:Button ID="Btn_Logout" runat="server" Text="Logout" OnClick="Btn_Logout_Click" />
+            <asp:Button ID="Btn_Add" runat="server" Text="Add Product" OnClick="Btn_Add_Click" />
          </p>
         <p>
             &nbsp;</p>

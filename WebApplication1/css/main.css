@@ -110,7 +110,7 @@ body {
 /*Footer*/
 .footer {
   width:100%;
-
+  height: auto;
 }
 
 #copyright {
@@ -157,9 +157,10 @@ body {
 
 /*map*/
 #map {
-   width: 500px;
-   height: 700px;
+   width: 600px;
+   height: 500px;
    background-color: grey;
-   
+   margin-left:180px;
+   margin-bottom: 30px;
 
  }

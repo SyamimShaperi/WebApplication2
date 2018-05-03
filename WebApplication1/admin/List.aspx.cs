@@ -24,5 +24,10 @@ namespace WebApplication1.admin
             HttpContext.Current.GetOwinContext().Authentication.SignOut(Microsoft.AspNet.Identity.DefaultAuthenticationTypes.ApplicationCookie);
             Response.Redirect("~/login.aspx");
         }
+
+        protected void Btn_Add_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/admin/Add.aspx");
+        }
     }
 }

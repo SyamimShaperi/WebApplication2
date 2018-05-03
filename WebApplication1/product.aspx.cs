@@ -38,57 +38,7 @@ namespace WebApplication1
             productItem.sku = "PRO1";
             productItem.quantity = quantityOfProduct.ToString();
 
-            var transactionDetails = new Details();
-            transactionDetails.tax = "0";
-            transactionDetails.shipping = postagePackingCost.ToString();
-            transactionDetails.subtotal = subtotal.ToString("0.00");
-
-            var transactionAmount = new Amount();
-            transactionAmount.currency = "BND";
-            transcationAmount.total = total.ToString("0.00");
-            transactionAmount.details = TransactionDetails;
-
-            var transaction = new Transaction();
-            transaction.description = "Product 1 description";
-            transaction.invoice_number = Guid.NewGuid().ToString();
-            transaction.amount = transactionAmount;
-            transaction.item_list = new ItemList
-            {
-                items = new List<Item> { productItem }
-            };
-
-            var payer = new Payer();
-            payer.payment_method = "paypal";
-
-            var redirectUrls = new RedirectUrls();
-            redirectUrls.cancel_url = 
-            redirectUrls.return_url =
-
-            var payment = Payment.Create(apiContext, new Payment
-            {
-                intent = "sale",
-                payer = payer,
-                transactions = new List<Transcation> { transaction },
-                redirect_urls = redirectUrls
-            });
-
-            Session["paymentId"] = new Payment.id;
-
-            foreach (var link in Payment.link)
-            {
-                if (link.rel.ToLower().Trim().Equals("approval_url"))
-                {
-                    Response.Redirect(link.href);
-                }
-            }
-
-            var PayerId = Request.QueryString["PayerID"].ToString();
-            var paymentExecution = new PaymentExecution() { payer_id = payerId };
-
-            var executedPayment = payment.Execute(apiContext, paymentExecution);
-
-            litInformation.Text = "<p> Your Order has been completed</p>";
-            btnConfirmPurchase.Visible = false;
+           
 
 
 
